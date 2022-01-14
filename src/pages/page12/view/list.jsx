@@ -12,7 +12,9 @@ import {
 export default class List extends Component {
     onClick = () => {
         console.log('click', this.props);
-        this.props.history.push(`/page12/detail/0`)
+        // this.props.history.push(`/page12/detail/0`)
+        this.props.history.push(`/detail/0`)
+
         // this.props.history.push(`/detail`)
 
     }
@@ -21,11 +23,11 @@ export default class List extends Component {
             <div>
                 这是List页面
                 <Button onClick={this.onClick}>详情</Button>
-                <switch>
-                    <Route path={`/page12/detail/:Id`} >
+                <Switch>
+                    <Route path={`/detail/:Id`} >
                         <Detail />
                     </Route>
-                </switch>
+                </Switch>
             </div>
         )
     }

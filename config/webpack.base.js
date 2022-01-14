@@ -8,20 +8,23 @@ module.exports = {
   entry: setEntry,
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: '[name]/index.js'
+    filename: '[name]/index.js',
+    publicPath: '/'
   },
   module: {
     rules: [
+      {test:/\.css$/,use:['style-loader','css-loader']},
       {
-        test: /\.(sa|sc|c)ss$/,
+        test: /\.less$/,
         use: [
-          // 'style-loader',
-          MiniCssExtractPlugin.loader,
+          'style-loader',
+          // MiniCssExtractPlugin.loader,
           'css-loader',
-          'resolve-url-loader',
-          'sass-loader'
+          // 'resolve-url-loader',
+          'less-loader'
         ]
       },
+      
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,

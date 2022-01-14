@@ -6,17 +6,16 @@ import {
   Link,
 } from "react-router-dom";
 import List from './view/list'
+import Detail from './view/detail';
+import './index.less'
 
-function App () {
+function App() {
   return (
     <Router>
       <div id="page1">
-        {/*
-         <p>我是PAGE1，Hello World</p>
-        <Link to="/list">Topics</Link>
-       */}
         <Switch>
-          <Route path="/" component={List} />
+          <Route exact path={`/app/event/page1`} component={List} />
+          <Route exact path={`/app/event/page1/detail/:id`} component={Detail} />
         </Switch>
       </div>
     </Router>

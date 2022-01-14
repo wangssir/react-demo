@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 
 export default class Detail extends Component {
-  render () {
+  render() {
+    console.log(this.props, '====')
+
     return (
       <div>
         这是Detail

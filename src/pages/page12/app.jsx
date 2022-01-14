@@ -10,18 +10,27 @@ import {
   Link,
   Routes,
 } from "react-router-dom";
+import Mymodal from './view/myModal';
+import ComfirmModal from './view/confirmModal';
+import MyCalendar from './view/myCalendar';
+import MyDatapicker from './view/myDatapicker'
 function App() {
   return (
     <div id="page1">
-      <Router >
-        {/* <switch>
+      {/* <Router > */}
+      {/* <switch>
           <Route exact path="/" component={List} />
           <Route path='/Detail' component={Detail} ></Route>
         </switch> */}
-        <Switch>
-          <Route path="/page12" component={List} />
+      {/* <Switch>
+          <Route path="/" component={List} />
+          <Route path='/page12/detail/:Id' component={Detail} ></Route>
         </Switch>
-      </Router>
+      </Router> */}
+      {/* <Mymodal /> */}
+      {/* <ComfirmModal></ComfirmModal> */}
+      {/* <MyDatapicker></MyDatapicker> */}
+      111
     </div >
   )
 }

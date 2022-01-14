@@ -5,29 +5,24 @@ import {
   Route,
 } from "react-router-dom";
 import Detail from './detail'
+import '../index.less'
 
 export default class List extends Component {
   routerLink = () => {
-    this.props.history.push('/list/detail/0')
+    console.log(this.props, '====')
+    this.props.history.push(`${this.props.location.pathname}/detail/0`);
+
   }
 
-  render () {
+  render() {
     return (
       <div>
         <h1>这是List</h1>
         <ul>
           <li>
-            <a onClick={this.routerLink}>Detail</a>
+            <a onClick={this.routerLink}>查看</a>
           </li>
         </ul>
-        <Switch>
-          {/*<Route exact path="/list">
-             <h3>Please select a list.</h3>
-    </Route>*/}
-          <Route path={`/list/detail/:topicId`}>
-            <Detail />
-          </Route>
-        </Switch>
       </div>
     )
   }
