@@ -10,6 +10,7 @@ module.exports = merge(base, {
     open: true,
     contentBase: path.join(__dirname, './dist'),
     // historyApiFallback: true, //不跳转
+    overlay: true, // 浏览器页面上显示错误
     historyApiFallback: {
       rewrites: [
         { from: /^(.*)page1(.*)$/, to: '/page1/index.html'},
@@ -22,18 +23,6 @@ module.exports = merge(base, {
     },
     inline: true, //实时刷新
     hot: true, // 开启热更新,
-    port: 8000,
-    // Proxy:{
-    //   '/': {
-    //     target: 'http://localhost:8000',
-    //     secure: false,
-    //     changeOrigin: true,
-    //     // bypass: function(req, res, proxyOptions) {
-    //     //   if (req.headers.accept.indexOf('html') !== -1) { 
-    //     //     return `/${__dirname}/index.html`;
-    //     //   }
-    //     // }
-    //   }
-    // }
+    port: 8000, 
   }
 })

@@ -2,7 +2,7 @@ const path = require('path')
 const glob = require('glob')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
-function setEntry () {
+function setEntry () { 
   const files = glob.sync('./src/pages/**/index.jsx')
   const entry = {}
   files.forEach(file => {

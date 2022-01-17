@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Modal, Button } from 'antd';
+import { Modal, Button, ConfigProvider } from 'antd';
 
 const Mymodal = () => {
     const [isModalVisible, setIsModalVisible] = useState(false);
@@ -17,7 +17,7 @@ const Mymodal = () => {
     };
 
     return (
-        <>
+        <ConfigProvider prefixCls={'mcantd4'} iconPrefixCls={'mcanticon4'}>
             <Button type="primary" onClick={showModal}>
                 Open Modal
             </Button>
@@ -26,7 +26,7 @@ const Mymodal = () => {
                 <p>Some contents...</p>
                 <p>Some contents...</p>
             </Modal>
-        </>
+        </ConfigProvider>
     );
 };
 export default Mymodal
