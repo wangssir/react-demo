@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 import List from './view/list'
 import Detail from './view/detail';
-import './index.less'
 
 function App() {
   return (

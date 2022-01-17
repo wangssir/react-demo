@@ -27,10 +27,10 @@ function App() {
           <Route path='/page12/detail/:Id' component={Detail} ></Route>
         </Switch>
       </Router> */}
-      {/* <Mymodal /> */}
+      <Mymodal />
       {/* <ComfirmModal></ComfirmModal> */}
       {/* <MyDatapicker></MyDatapicker> */}
-      111
+      {/* 111 */}
     </div >
   )
 }

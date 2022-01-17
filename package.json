@@ -39,6 +39,7 @@
   },
   "sideEffects": [
     "*.css",
-    "*.scss"
+    "*.scss",
+    "*.less"
   ]
 }
